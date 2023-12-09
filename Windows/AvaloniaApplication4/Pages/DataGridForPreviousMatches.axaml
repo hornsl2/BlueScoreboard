@@ -1,0 +1,26 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaApplication4.Pages.DataGridForPreviousMatches">
+	<Grid>
+
+		<Grid.RowDefinitions>
+			<RowDefinition Height="30"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+
+		<Label HorizontalAlignment="Center" Content="{Binding DataGridTitle}"/>
+
+		<DataGrid Name="dataGrid" Items="{Binding GameScore}" AutoGenerateColumns="False">
+			<DataGrid.Columns>
+				<DataGridTextColumn FontSize="90"  Header="Team1Score" Binding="{Binding Team1Score}" Width=".4*" />
+				<DataGridTextColumn FontSize="90" Header="Team2Score" Binding="{Binding Team2Score}" Width=".4*" />
+				<DataGridTextColumn  Header="Duration" Binding="{Binding Duration}" Width=".2*" />
+				<DataGridTextColumn  Header="Gametype" Binding="{Binding GameType}" Width=".2*" />
+			</DataGrid.Columns>
+		</DataGrid>
+
+	</Grid>
+</UserControl>
